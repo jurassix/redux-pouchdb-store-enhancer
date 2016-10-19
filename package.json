@@ -1,0 +1,38 @@
+{
+  "name": "redux-pouchdb-store-enhancer",
+  "version": "1.0.0",
+  "description": "Redux PouchDB Enhancer to store actions locally, sync with remote CouchDB, and time travel by applying remote actions locally and then compute distributed nextState.",
+  "main": "./lib/pouchdbStoreEnhancer.js",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jurassix/redux-pouchdb-store-enhancer.git"
+  },
+  "keywords": [
+    "redux",
+    "time",
+    "travel",
+    "pouchdb",
+    "couchdb",
+    "store",
+    "enhancer"
+  ],
+  "author": "jurassix (clinton.ayres@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jurassix/redux-pouchdb-store-enhancer/issues"
+  },
+  "homepage": "https://github.com/jurassix/redux-pouchdb-store-enhancer#readme",
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-2": "^6.17.0",
+    "redux": "^3.6.0"
+  },
+  "dependencies": {
+    "node-uuid": "^1.4.7",
+    "pouchdb": "^6.0.7"
+  }
+}

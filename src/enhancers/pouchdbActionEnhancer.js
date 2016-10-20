@@ -1,4 +1,4 @@
-import put from './put';
+import put from '../utils/put';
 
 export default function pouchdbActionEnhancer(actionsDB) {
   return (dispatch, getState, action) => {

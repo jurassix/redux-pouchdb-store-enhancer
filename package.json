@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.11.6",
-    "node-uuid": "^1.4.7"
+    "node-uuid": "^1.4.7",
+    "redux-action-enhancer-middleware": "^1.0.1"
   }
 }

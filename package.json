@@ -1,6 +1,6 @@
 {
   "name": "redux-pouchdb-store-enhancer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Redux PouchDB Enhancer to store actions locally, sync with remote CouchDB, and time travel by applying remote actions locally and then compute distributed nextState.",
   "main": "./lib/pouchdbStoreEnhancer.js",
   "scripts": {

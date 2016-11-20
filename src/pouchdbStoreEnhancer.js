@@ -1,5 +1,5 @@
 import PouchDB from 'pouchdb';
-import { applyMiddleware } from 'redux';
+import { applyMiddleware, compose } from 'redux';
 import actionEnhancerMiddleware from 'redux-action-enhancer-middleware';
 import pouchdbReducerEnhancer from './enhancers/pouchdbReducerEnhancer';
 import ignorePouchActionsFilter from './filters/ignorePouchActionsFilter';
@@ -14,6 +14,7 @@ if (process.env.NODE_ENV !== 'production' && window) {
 export default function pouchdbStoreEnhancer(
   remoteActionsDBUrl = 'http://127.0.0.1:5984/actions',
   localActionsDBName = 'actions',
+  filterFunction = ignorePouchActionsFilter
 ) {
   return (createStore) => (reducer, preloadedState) => {
     const actionsDB = new PouchDB(localActionsDBName);
@@ -23,7 +24,7 @@ export default function pouchdbStoreEnhancer(
     const pouchActionEnhancer =
       applyMiddleware(
         actionEnhancerMiddleware({
-          filter: ignorePouchActionsFilter,
+          filter: filterFunction,
           enhancer: pouchdbActionEnhancer(actionsDB),
         })
       );

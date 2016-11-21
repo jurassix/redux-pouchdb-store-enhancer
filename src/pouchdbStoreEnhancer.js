@@ -1,5 +1,5 @@
 import PouchDB from 'pouchdb';
-import { applyMiddleware, compose } from 'redux';
+import { applyMiddleware } from 'redux';
 import actionEnhancerMiddleware from 'redux-action-enhancer-middleware';
 import pouchdbReducerEnhancer from './enhancers/pouchdbReducerEnhancer';
 import ignorePouchActionsFilter from './filters/ignorePouchActionsFilter';
